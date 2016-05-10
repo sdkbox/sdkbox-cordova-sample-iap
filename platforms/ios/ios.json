@@ -1,0 +1,44 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"SdkboxIAP\"><param name=\"ios-package\" value=\"SDKBoxIAP\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.cocos2dx.PluginTest"
+        },
+        "sdkbox-plugin-iap": {
+            "PACKAGE_NAME": "org.cocos2dx.PluginTest"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/sdkbox-plugin-iap/www/sdkbox_iap.js",
+            "id": "sdkbox-plugin-iap.IAPService",
+            "pluginId": "sdkbox-plugin-iap",
+            "clobbers": [
+                "sdkbox.PluginIAP"
+            ],
+            "runs": true
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "sdkbox-plugin-iap": "1.0.1"
+    }
+}
